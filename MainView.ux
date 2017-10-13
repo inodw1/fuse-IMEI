@@ -1,0 +1,43 @@
+<App>
+    <JavaScript>
+        var Observable = require("FuseJS/Observable");
+        var Log = require("CallDetails");
+        var val = Observable("Nothing to Show!");
+    
+            function check(){
+
+                var status = 0;
+                var response_ok = false;
+                var obj = Log.callHistory();
+                val.value = obj;
+                var imei = {"imei": obj};
+                console.log(imei);
+
+                fetch('http://localhost/api.php', {  
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(imei),
+                }).then(function(response) {
+                    status = response.status;  
+                    response_ok = response.ok; 
+                    return response.json();    
+                }).then(function(responseObject) {
+                    // Do something with the result
+                    console.log("status =>"+JSON.stringify(responseObject.imeistatus));
+                }).catch(function(err) {
+                    // An error occurred somewhere in the Promise chain
+                });
+
+                }
+            module.exports = {
+                check,
+                val
+            };
+
+        </JavaScript>
+    <StackPanel Alignment="VerticalCenter" Margin="8" ItemSpacing="8">
+        <Button Text="Click Me" Clicked="{check}"/>
+        <Text Value="{val}" Alignment="Center" Color="#000" />
+    </StackPanel>
+
+</App>

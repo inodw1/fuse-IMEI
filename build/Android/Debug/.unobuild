@@ -1,0 +1,4 @@
+$: -1863472483
+BuildCommand: build.bat
+RunCommand: run.bat
+Product: CallHistory.apk
