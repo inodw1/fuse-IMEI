@@ -35,7 +35,6 @@ public class CallDetails : NativeModule{
 
     void OnPermitted(PlatformPermission permission)
     {
-         debug_log "You can access the Call_History now";
          getPermission = callHistoryImpl();
     }
 

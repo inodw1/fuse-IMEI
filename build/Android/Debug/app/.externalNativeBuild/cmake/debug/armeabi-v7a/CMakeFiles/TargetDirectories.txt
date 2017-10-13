@@ -1,3 +1,0 @@
-E:/Fuse_Project/...ForeignCode/REST_TEST/build/Android/Debug/app/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/CallHistory.dir
-E:/Fuse_Project/...ForeignCode/REST_TEST/build/Android/Debug/app/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/edit_cache.dir
-E:/Fuse_Project/...ForeignCode/REST_TEST/build/Android/Debug/app/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/rebuild_cache.dir
